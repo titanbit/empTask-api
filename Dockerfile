@@ -3,4 +3,4 @@ WORKDIR app
 COPY . .
 RUN npm install
 EXPOSE 3322
-CMD ["node","app.js"]
+CMD ["node","server.js"]
