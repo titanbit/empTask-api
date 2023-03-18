@@ -13,28 +13,28 @@ app.use(express.urlencoded({ extended: true }))
 
 
 // Configuring the database
-const dbConfig = require("./config/database.config.js");
-mongoose.Promise = global.Promise;
+// const dbConfig = require("./config/database.config.js");
+// mongoose.Promise = global.Promise;
 
-mongoose
-    .connect(dbConfig.url, {
-        useNewUrlParser: true,
-    })
-    .then(() => {
-        console.log("## Successfully connected to the Mongo database");
-    })
-    .catch((err) => {
-        console.log(
-            "!! Could not connect to the Mongo database. Exiting now...",
-            err
-        );
-        process.exit();
-    });
+// mongoose
+//     .connect(dbConfig.url, {
+//         useNewUrlParser: true,
+//     })
+//     .then(() => {
+//         console.log("## Successfully connected to the Mongo database");
+//     })
+//     .catch((err) => {
+//         console.log(
+//             "!! Could not connect to the Mongo database. Exiting now...",
+//             err
+//         );
+//         process.exit();
+//     });
 
 
 // require modules
 
-require("./app/routes/emp.routes")(app)
+// require("./app/routes/emp.routes")(app)
 
 
 app.get("/", (req, res) => {
