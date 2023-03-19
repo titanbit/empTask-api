@@ -38,7 +38,7 @@ app.use(express.urlencoded({ extended: true }))
 
 
 app.get("/", (req, res) => {
-    res.send({ status: true, message: "backend api" })
+    res.send({ status: true, message: "backend api is " })
 })
 
 app.listen(PORT, () => {
